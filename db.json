@@ -6,6 +6,39 @@
       "name": "Kenzinho",
       "age": 38,
       "id": 1
+    },
+    {
+      "email": "teste@email.com",
+      "password": "$2a$10$82qIlGUp3EgqqknMczzzUuyTAPOPRMEwOyc4MATI1uTroYlt9DRE.",
+      "id": 2
+    }
+  ],
+  "hobby": [
+    {
+      "title": "Assistir Tv",
+      "frequencia": "Diária",
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "title": "Jogar Futebol",
+      "frequencia": "Semanal",
+      "userId": 2,
+      "id": 2
+    }
+  ],
+  "job": [
+    {
+      "title": "Developer",
+      "company": "Google",
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "title": "Enginer",
+      "company": "Google",
+      "userId": 1,
+      "id": 2
     }
   ]
 }
