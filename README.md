@@ -1,24 +1,63 @@
 # json-server-base
 
-Esse é o repositório com a base de JSON-Server + JSON-Server-Auth já configurada, feita para ser usada no desenvolvimento das API's nos Capstones do Q2.
-
-## Endpoints
-
-Assim como a documentação do JSON-Server-Auth traz (https://www.npmjs.com/package/json-server-auth), existem 3 endpoints que podem ser utilizados para cadastro e 2 endpoints que podem ser usados para login.
+A API possui 4 endpoints, register, login, hobby e jobs
 
 ### Cadastro
 
 POST /register <br/>
-POST /signup <br/>
-POST /users
 
-Qualquer um desses 3 endpoints irá cadastrar o usuário na lista de "Users", sendo que os campos obrigatórios são os de email e password.
-Você pode ficar a vontade para adicionar qualquer outra propriedade no corpo do cadastro dos usuários.
-
+Para realizar o registro é necessário informar o email e a senha da seguinte maneira:<br/>
+{<br/>
+"email": "exemplo@email.com",<br/>
+"password":"123456"<br/>
+}<br/>
 
 ### Login
 
 POST /login <br/>
-POST /signin
 
-Qualquer um desses 2 endpoints pode ser usado para realizar login com um dos usuários cadastrados na lista de "Users"
+A realizção do login deve ser feita de maneira análoga ao de registro, passando as mesmas informações:<br/>
+{<br/>
+"email": "exemplo@email.com",<br/>
+"password":"123456"<br/>
+}<br/>
+
+### Hobby
+
+-> Cadastro
+
+POST /hobby <br/>
+
+Para cadastrar um hobby é necessário a autorização pelo token, e o cadastro é feito da seguinte maneira:<br/>
+
+{<br/>
+"title": "Exemplo",<br/>
+"frequencia": "Exemplo",<br/>
+"userId": 1 (id do usuário)<br/>
+}<br/>
+
+-> Visualização
+
+GET /hobby <br/>
+
+Não há necessidade de o usuário estar logado para visualização<br/>
+
+### Job
+
+-> Cadastro
+
+POST /job <br/>
+
+Para cadastrar um job é necessário a autorização pelo token, e o cadastro é feito da seguinte maneira:<br/>
+
+{<br/>
+"title": "Exemplo",<br/>
+"company": "Exemplo",<br/>
+"userId": 1 (id do usuário)<br/>
+}<br/>
+
+-> Visualização
+
+GET /job <br/>
+
+É necessário a autorização pelo token para visualização<br/>
